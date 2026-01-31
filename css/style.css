@@ -189,7 +189,7 @@ body {
 .bg-bottom {
     background: linear-gradient(135deg, #0e3a7a 0%, #1a56a8 100%);
     min-height: 40vh;
-    background-image: <img src="/images/background.png" >;
+    background-image: url('/images/background.png');
     background-size: cover;
     background-position: center;
     background-blend-mode: overlay;
@@ -340,4 +340,5 @@ body {
     }
 
 }
+
 
