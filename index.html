@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBTECH - 首页</title>
+    <link rel="stylesheet" href="./static/css/style.css">
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <div class="top-bar">
+        <div class="language-switcher">
+            <select id="languageSelect">
+                <option value="zh-CN">简体中文</option>
+                <option value="en-US">English</option>
+                <option value="zh-TW">繁體版</option>
+            </select>
+        </div>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="搜索...">
+            <button id="searchButton">
+                <img src="./static/icons/search.jpg" alt="搜索" width="16" height="12">
+            </i></button>
+        </div>
+    </div>
+
+    <!-- 主导航栏 -->
+    <nav class="main-nav">
+        <div class="logo-container">
+            <div class="logo-icon">
+                <img src="./static/icons/BB2.png"  width="70" height="70">
+            </div>
+            <div class="logo-text"><!--BBTECH--></div>
+        </div>
+        
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="#" class="nav-link">首页</a>
+                <ul class="dropdown-menu">
+                    <!--<li><a href="#">公司简介</a></li> 
+                    <li><a href="#">发展历程</a></li>
+                    <li><a href="#">企业文化</a></li>-->
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">关于BBTECH</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">管理团队</a></li>
+                    <li><a href="#">团队人员</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">新闻中心</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">技术更新</a></li>
+                    <li><a href="#">行业动态</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">目标方向</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">人工智能</a></li>
+                    <li><a href="#">机器人</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">联系我们</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">人才交流</a></li>
+                    <li><a href="#">客户服务</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- 主体内容区域 -->
+    <div class="main-content">
+        <!-- 上半部分背景 -->
+        <div class="bg-section bg-top">
+            <div class="hero-content">
+                <h1 class="hero-title">长风引路<br>再启新程</h1>
+                <p class="hero-subtitle">致力于为各行业提供全方位解决方案。</p>
+                <a href="#" class="cta-button">了解更多</a>
+            </div>
+        </div>
+        
+        <!-- 下半部分背景 -->
+        <div class="bg-section bg-bottom">
+            <div class="bottom-content">
+                <h2 class="bottom-title">创新引领未来</h2>
+                <p class="bottom-text">BBTECH通过持续技术创新，构建覆盖智能医疗、物流、教育的全产业链生态，迎接健康美好的未来。</p>
+                <a href="#" class="cta-button" style="margin-top: 30px;">探索我们的业务</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#">关于BBTECH</a>
+            <a href="#">新闻中心</a>
+            <a href="#">目标方向</a>
+            <a href="#">商务服务</a>
+            <a href="#">人才交流</a>
+            <a href="#">信息公开</a>
+            <a href="#">投诉建议</a>
+        </div>
+        <div class="copyright">
+            © 2026 BBTECH 版权所有 | 隐私政策 | 使用条款 | 网站地图
+        </div>
+    </footer>
+
+    <script>
+        // 语言切换功能
+        document.getElementById('languageSelect').addEventListener('change', function() {
+            const language = this.value;
+            if (language === 'en-US') {
+                // 切换为英文
+                document.querySelector('.logo-text').textContent = 'BBTECH';
+                document.querySelectorAll('.nav-link')[0].textContent = 'Home';
+                document.querySelectorAll('.nav-link')[1].textContent = 'About';
+                document.querySelectorAll('.nav-link')[2].textContent = 'News';
+                document.querySelectorAll('.nav-link')[3].textContent = 'Business';
+                document.querySelectorAll('.nav-link')[4].textContent = 'Contact';
+                document.getElementById('searchInput').placeholder = 'Search...';
+                document.querySelector('.hero-title').innerHTML = 'Leading with the Wind<br>Starting a New Journey';
+                document.querySelector('.hero-subtitle').textContent = 'ShunTaiKang is committed to providing comprehensive health security services, driving the development of the health industry through technological innovation, and creating healthier and better lives for every family.';
+                document.querySelector('.cta-button').textContent = 'Learn More';
+                document.querySelector('.bottom-title').textContent = 'Innovation Leads the Future';
+                document.querySelector('.bottom-text').textContent = 'Through continuous technological innovation and service upgrades, ShunTaiKang has built a full industrial chain ecosystem covering health insurance, medical services, and health management. We are committed to becoming your most trusted health partner to jointly embrace a healthy and beautiful future.';
+                document.querySelectorAll('.cta-button')[1].textContent = 'Explore Our Business';
+            } else if (language === 'zh-TW') {
+                // 切换为繁体中文
+                document.querySelector('.logo-text').textContent = 'BBTECH';
+                document.querySelectorAll('.nav-link')[0].textContent = '首頁';
+                document.querySelectorAll('.nav-link')[1].textContent = '關於BBTECH';
+                document.querySelectorAll('.nav-link')[2].textContent = '新聞中心';
+                document.querySelectorAll('.nav-link')[3].textContent = '主營業務';
+                document.querySelectorAll('.nav-link')[4].textContent = '聯繫我們';
+                document.getElementById('searchInput').placeholder = '搜索...';
+                document.querySelector('.hero-title').innerHTML = '長風引路<br>再啟新程';
+                document.querySelector('.hero-subtitle').textContent = '順泰康致力於提供全面的健康保障服務，以科技創新驅動健康產業發展，為每個家庭創造更健康、更美好的生活。';
+                document.querySelector('.cta-button').textContent = '了解更多';
+                document.querySelector('.bottom-title').textContent = '創新引領未來';
+                document.querySelector('.bottom-text').textContent = '順泰康通過持續的技術創新和服務升級，構建了覆蓋健康保險、醫療服務、健康管理的全產業鏈生態。我們致力於成為您最值得信賴的健康合作夥伴，共同迎接健康美好的未來。';
+                document.querySelectorAll('.cta-button')[1].textContent = '探索我們的業務';
+            } else {
+                // 切换为简体中文
+                document.querySelector('.logo-text').textContent = 'BBTECH';
+                document.querySelectorAll('.nav-link')[0].textContent = '首页';
+                document.querySelectorAll('.nav-link')[1].textContent = '关于BBTECH';
+                document.querySelectorAll('.nav-link')[2].textContent = '新闻中心';
+                document.querySelectorAll('.nav-link')[3].textContent = '主营业务';
+                document.querySelectorAll('.nav-link')[4].textContent = '联系我们';
+                document.getElementById('searchInput').placeholder = '搜索...';
+                document.querySelector('.hero-title').innerHTML = '长风引路<br>再启新程';
+                document.querySelector('.hero-subtitle').textContent = '顺泰康致力于提供全面的健康保障服务，以科技创新驱动健康产业发展，为每个家庭创造更健康、更美好的生活。';
+                document.querySelector('.cta-button').textContent = '了解更多';
+                document.querySelector('.bottom-title').textContent = '创新引领未来';
+                document.querySelector('.bottom-text').textContent = '顺泰康通过持续的技术创新和服务升级，构建了覆盖健康保险、医疗服务、健康管理的全产业链生态。我们致力于成为您最值得信赖的健康合作伙伴，共同迎接健康美好的未来。';
+                document.querySelectorAll('.cta-button')[1].textContent = '探索我们的业务';
+            }
+        });
+        
+        // 搜索功能
+        document.getElementById('searchButton').addEventListener('click', function() {
+            const searchTerm = document.getElementById('searchInput').value;
+            if (searchTerm.trim() !== '') {
+                alert(`搜索关键词: ${searchTerm}\n搜索功能将在完整版网站中实现`);
+            }
+        });
+        
+        // 搜索框回车事件
+        document.getElementById('searchInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                document.getElementById('searchButton').click();
+            }
+        });
+        
+        // 导航菜单点击效果
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                // 如果是直接点击导航项（不是下拉菜单项），高亮当前项
+                if (this.parentElement.classList.contains('nav-item')) {
+                    document.querySelectorAll('.nav-link').forEach(item => {
+                        item.style.color = '';
+                    });
+                    this.style.color = 'var(--primary-color)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
