@@ -180,7 +180,7 @@ body {
 .bg-top {
     background: linear-gradient(135deg, #e8f1ff 0%, #d6e6ff 100%);
     min-height: 60vh;
-    background-image: url('/images/背景.png');
+    background-image: url('/images/iot1.png');
     background-size: cover;
     background-position: center;
     background-blend-mode: overlay;
@@ -189,7 +189,7 @@ body {
 .bg-bottom {
     background: linear-gradient(135deg, #0e3a7a 0%, #1a56a8 100%);
     min-height: 40vh;
-    background-image: url('/images/background.png');
+    background-image: url('/images/iot2.png');
     background-size: cover;
     background-position: center;
     background-blend-mode: overlay;
@@ -340,5 +340,6 @@ body {
     }
 
 }
+
 
 
